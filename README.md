@@ -1,5 +1,5 @@
 
-Step 1: Set Up Your Discord Bot
+**Step 1: Set Up Your Discord Bot**
 1. Create a Discord Application:
     * Visit the Discord Developer Portal.
     * Click on "New Application" and provide a name for your application.
@@ -20,7 +20,7 @@ Step 1: Set Up Your Discord Bot
         * Message Content Intent: If your bot needs to read message content.
     * Copy the generated URL and open it in your browser to invite your bot to your server.
 
-Step 2: Set Up Your Telegram Bot
+**Step 2: Set Up Your Telegram Bot**
 1. Create a Telegram Bot:
     * Open Telegram and search for "BotFather".
     * Start a chat with BotFather and use the command /newbot to create a new bot.
@@ -36,7 +36,7 @@ Step 2: Set Up Your Telegram Bot
 * Updates: If you do not see the chat ID, try removing the bot from the channel/group and adding it back, then send a message again.
 
 
-Explanation of the Code
+**Explanation of the Code**
 * The bot listens for messages in Discord.
 * When a message starts with ?telesend and is a reply to another message, it fetches the original message being replied to.
 * It then sends the content of that original message to the specified Telegram chat.
