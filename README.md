@@ -28,7 +28,7 @@ Step 2: Set Up Your Telegram Bot
     * Invite your Bot to your channel/group.
 2. Get Your Chat ID:
     * Send any message to channel/group.
-    * Go to: https://api.telegram.org/bot<yourtoken>/getUpdates
+    * Go to: https://api.telegram.org/bot(YourTokenHere)/getUpdates
     * Look for the chat object in the JSON response to find your chat ID.
     * For group chats and channels, the chatId will typically start with a negative sign (e.g., -1001234567890).
 
