@@ -36,6 +36,13 @@
 * Updates: If you do not see the chat ID, try removing the bot from the channel/group and adding it back, then send a message again.
 
 
+**Step 3: Run Node Application**
+Update the .env-sample file with your Discord App Token & Telegram Bot Token & ChatId
+Rename to .env
+node bot.js
+
+(Alternatively, you can use render.com (or any other web service provider, like AWS, Google Cloud, ...) to run your Node application, don't forget to update the app environment with your tokens & chatId (.env)
+
 **Explanation of the Code**
 * The bot listens for messages in Discord.
 * When a message starts with ?telesend and is a reply to another message, it fetches the original message being replied to.
