@@ -39,7 +39,7 @@
 **Step 3: Run Node Application**
    * Update the .env-sample file with your Discord App Token & Telegram Bot Token & ChatId
    * Rename to .env
-   * node bot.js
+   * run in your terminal, node bot.js
 
 (Alternatively, you can use render.com (or any other web service provider, like AWS, Google Cloud, ...) to run your Node application, don't forget to update the app environment with your tokens & chatId (.env)
 
