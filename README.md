@@ -25,8 +25,9 @@ Step 2: Set Up Your Telegram Bot
     * Open Telegram and search for "BotFather".
     * Start a chat with BotFather and use the command /newbot to create a new bot.
     * Follow the prompts to name your bot and obtain your bot token. Keep this token confidential!
+    * Invite your Bot to your channel/group.
 2. Get Your Chat ID:
-    * Send a message to channel/group.
+    * Send any message to channel/group.
     * Go to: https://api.telegram.org/bot<yourtoken>/getUpdates
     * Look for the chat object in the JSON response to find your chat ID.
     * For group chats and channels, the chatId will typically start with a negative sign (e.g., -1001234567890).
