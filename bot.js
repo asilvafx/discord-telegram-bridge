@@ -1,5 +1,5 @@
 require('dotenv').config(); // Load environment variables from .env file
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, PermissionFlagsBits } = require('discord.js');
 const TelegramBot = require('node-telegram-bot-api');
 
 // Get credentials from environment variables
@@ -24,7 +24,7 @@ discordClient.on('messageCreate', async (message) => {
 
     // Check if the user has admin permissions
     const member = await message.guild.members.fetch(message.author.id);
-    if (!member.permissions.has('ADMINISTRATOR')) {
+    if (!member.permissions.has(PermissionFlagsBits.Administrator)) {
         return message.reply("You do not have permission to use this command.");
     }
 
