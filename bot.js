@@ -19,8 +19,17 @@ const telegramBot = new TelegramBot(telegramToken, { polling: true });
 
 // Listen for messages
 discordClient.on('messageCreate', async (message) => {
-    // Check if the message is a reply and starts with the command ?telesend
-    if (message.content.startsWith('?telesend') && message.reference) {
+    // Check if the message is from a bot or if it doesn't start with the command
+    if (message.author.bot || !message.content.startsWith('?telesend')) return;
+
+    // Check if the user has admin permissions
+    const member = await message.guild.members.fetch(message.author.id);
+    if (!member.permissions.has('ADMINISTRATOR')) {
+        return message.reply("You do not have permission to use this command.");
+    }
+
+    // Check if the message is a reply
+    if (message.reference) {
         try {
             // Fetch the message being replied to
             const referencedMessage = await message.channel.messages.fetch(message.reference.messageId);
@@ -33,6 +42,8 @@ discordClient.on('messageCreate', async (message) => {
             console.error(`Failed to forward message: ${error}`);
             await message.reply("Failed to forward message.");
         }
+    } else {
+        await message.reply("Please reply to a message to forward it to Telegram.");
     }
 });
 
