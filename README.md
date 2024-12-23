@@ -41,4 +41,5 @@ Explanation of the Code
 * When a message starts with ?telesend and is a reply to another message, it fetches the original message being replied to.
 * It then sends the content of that original message to the specified Telegram chat.
 * If the message is successfully sent, it replies in Discord to confirm the action; otherwise, it sends an error message.
+* (UPDATED) Only admins can use the command ?telesend
 
